@@ -1,0 +1,43 @@
+<?php
+/**
+ * @file
+ * All hooks into core and contrib are defined here.
+ */
+
+/**
+ * All hooks should be either very short or extracted out into includes.
+ */
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ *
+ * We supply basic structure for both layouts and styles
+ * so that we can reuse the layouts and styles.
+ *
+ * It is possible to overwrite the theme function for both
+ * layouts and styles in the theme hence we are only
+ * doing very basic markup and styling here.
+ *
+ */
+function campkit_core_ctools_plugin_directory($module, $plugin) {
+  $plugins = array('layouts', 'styles');
+  if (in_array($plugin, $plugins)) {
+    return 'plugins/' . $plugin;
+  }
+}
+
+function campkit_core_entity_info_alter(&$entity_info) {
+  // Sessions
+  $entity_info['fieldable_panels_pane']['bundles']['campkit_session'] = array(
+    'label' => t('Add session'),
+    'pane category' => t('Custom'),
+    'pane top level' => TRUE,
+    'pane icon' => drupal_get_path('module', 'campkitlite_core') . '/images/session.png',
+    'admin' => array(
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 4,
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/quick-links',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
+}

@@ -19,14 +19,14 @@
  * doing very basic markup and styling here.
  *
  */
-function campkit_core_ctools_plugin_directory($module, $plugin) {
+function campkitlite_core_ctools_plugin_directory($module, $plugin) {
   $plugins = array('layouts', 'styles');
   if (in_array($plugin, $plugins)) {
     return 'plugins/' . $plugin;
   }
 }
 
-function campkit_core_entity_info_alter(&$entity_info) {
+function campkitlite_core_entity_info_alter(&$entity_info) {
   // Sessions
   $entity_info['fieldable_panels_pane']['bundles']['campkit_session'] = array(
     'label' => t('Add session'),

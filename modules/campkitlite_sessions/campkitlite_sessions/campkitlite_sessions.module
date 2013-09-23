@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the CampKit Lite Sessions feature.
+ */
+
+include_once 'campkitlite_sessions.features.inc';

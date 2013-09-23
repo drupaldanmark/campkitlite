@@ -1,5 +1,5 @@
 name = CampKitLite Core
 description = The base elements of the CampKitLite package required for all sub-features
-package = Campkit
+package = Campkit Lite
 core = 7.x
 

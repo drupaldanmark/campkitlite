@@ -28,7 +28,7 @@ function campkitlite_core_ctools_plugin_directory($module, $plugin) {
 
 function campkitlite_core_entity_info_alter(&$entity_info) {
   // Sessions
-  $entity_info['fieldable_panels_pane']['bundles']['campkit_session'] = array(
+  $entity_info['fieldable_panels_pane']['bundles']['session'] = array(
     'label' => t('Add session'),
     'pane category' => t('Custom'),
     'pane top level' => TRUE,
@@ -36,7 +36,7 @@ function campkitlite_core_entity_info_alter(&$entity_info) {
     'admin' => array(
       'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
       'bundle argument' => 4,
-      'real path' => 'admin/structure/fieldable-panels-panes/manage/quick-links',
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/session',
       'access arguments' => array('administer fieldable panels panes'),
     ),
   );

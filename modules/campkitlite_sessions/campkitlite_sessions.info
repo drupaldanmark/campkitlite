@@ -1,6 +1,7 @@
 name = CampKit Lite Sessions
 core = 7.x
 package = Campkit Lite
+php = 5.2.4
 dependencies[] = ctools
 dependencies[] = features
 dependencies[] = image
@@ -22,4 +23,4 @@ features[field_instance][] = fieldable_panels_pane-session-field_session_speaker
 features[field_instance][] = fieldable_panels_pane-session-field_session_type
 features[taxonomy][] = session_type
 features[variable][] = panelizer_defaults_taxonomy_term_session_type
-project path = sites/all/modules/campkitlite_core/modules/campkitlite_sessions
+project path = sites/all/modules/campkitlite_core/modules

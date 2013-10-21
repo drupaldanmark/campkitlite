@@ -1,0 +1,12 @@
+name = CampKite Lite Sponsors
+core = 7.x
+package = Campkit Lite
+dependencies[] = features
+dependencies[] = image
+dependencies[] = link
+features[features_api][] = api:2
+features[field_base][] = field_featured_image
+features[field_base][] = field_link
+features[field_instance][] = fieldable_panels_pane-sponsor-field_featured_image
+features[field_instance][] = fieldable_panels_pane-sponsor-field_link
+project path = sites/all/modules/campkitlite_core/modules
